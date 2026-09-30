@@ -1,0 +1,157 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-shell">
+
+    <div class="auth-hero">
+        <div>
+            <div class="brand-mark">SP</div>
+
+            <h1>Student Portal</h1>
+
+            <p>
+                One place for your timetable, attendance,
+                notes and study materials.
+            </p>
+        </div>
+    </div>
+
+    <div class="auth-card">
+
+        <!-- LOGIN -->
+
+        <div id="loginPanel">
+
+            <h2>Welcome Back</h2>
+
+            <p class="muted">
+                Login to continue to your portal.
+            </p>
+
+            <form id="loginForm">
+
+                <label>Email</label>
+
+                <input
+                    id="loginEmail"
+                    type="email"
+                    placeholder="Enter email"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button class="btn primary full">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="switch">
+                Don't have an account?
+
+                <button
+                    class="link-btn"
+                    type="button"
+                    onclick="showSignup()"
+                >
+                    Sign Up
+                </button>
+            </p>
+
+        </div>
+
+
+        <!-- SIGN UP -->
+
+        <div id="signupPanel" class="hidden">
+
+            <h2>Create Account</h2>
+
+            <p class="muted">
+                Create your student account.
+            </p>
+
+            <form id="signupForm">
+
+                <label>Username</label>
+
+                <input
+                    id="signupUsername"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label>Email</label>
+
+                <input
+                    id="signupEmail"
+                    type="email"
+                    placeholder="Enter email"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    id="signupPassword"
+                    type="password"
+                    minlength="4"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <label>Confirm Password</label>
+
+                <input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="Confirm password"
+                    required
+                >
+
+                <button class="btn primary full">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p class="switch">
+
+                Already have an account?
+
+                <button
+                    class="link-btn"
+                    type="button"
+                    onclick="showLogin()"
+                >
+                    Login
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

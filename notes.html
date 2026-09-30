@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Notes - Student Portal
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        Student Portal
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="timetable.html">
+            Timetable
+        </a>
+
+        <a href="notes.html">
+            Notes
+        </a>
+
+        <a href="attendance.html">
+            Attendance
+        </a>
+
+    </div>
+
+
+    <button
+        class="btn danger"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</nav>
+
+
+<main class="main">
+
+
+    <div class="page-title">
+
+        <h1>
+            📚 My Notes
+        </h1>
+
+        <p class="muted">
+
+            Create unlimited subjects and
+            store notes and PDFs.
+
+        </p>
+
+    </div>
+
+
+    <!-- CREATE SUBJECT -->
+
+    <section class="panel">
+
+        <h2>
+            Create Subject
+        </h2>
+
+
+        <form
+            id="subjectForm"
+            class="actions"
+        >
+
+            <input
+                id="subjectName"
+                placeholder="Example: DBMS"
+                required
+                style="max-width:360px"
+            >
+
+
+            <button
+                class="btn primary"
+                type="submit"
+            >
+
+                + Add Subject
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- SUBJECTS -->
+
+    <section
+        id="subjectCards"
+        class="subject-grid"
+    >
+    </section>
+
+
+</main>
+
+
+<div
+    id="toast"
+    class="toast"
+></div>
+
+
+<script src="common.js"></script>
+
+<script src="notes.js"></script>
+
+
+</body>
+
+</html>

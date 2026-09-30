@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - Student Portal</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Student Portal
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="timetable.html">
+            Timetable
+        </a>
+
+        <a href="notes.html">
+            Notes
+        </a>
+
+        <a href="attendance.html">
+            Attendance
+        </a>
+
+    </div>
+
+    <button
+        class="btn danger"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</nav>
+
+
+<main class="main">
+
+    <div class="page-title">
+
+        <h1>
+            Welcome,
+            <span id="username"></span>
+            👋
+        </h1>
+
+        <p class="muted">
+            Here is your academic overview.
+        </p>
+
+    </div>
+
+
+    <!-- STATISTICS -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <h3>
+                Total Attendance
+            </h3>
+
+            <div
+                class="stat"
+                id="totalClasses"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Present
+            </h3>
+
+            <div
+                class="stat"
+                id="presentClasses"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Absent
+            </h3>
+
+            <div
+                class="stat"
+                id="absentClasses"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Overall Attendance
+            </h3>
+
+            <div
+                class="stat"
+                id="attendancePercentage"
+            >
+                0%
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CURRENT CLASS -->
+
+    <section class="panel current">
+
+        <h2>
+            ⏰ Current Class
+        </h2>
+
+        <div id="currentClass">
+            Checking timetable...
+        </div>
+
+    </section>
+
+
+    <section class="grid-2">
+
+
+        <!-- TODAY -->
+
+        <div class="panel">
+
+            <h2>
+                Today's Classes
+            </h2>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Time
+                            </th>
+
+                            <th>
+                                Subject
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody
+                        id="todayTable"
+                    >
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACCESS -->
+
+        <div class="panel">
+
+            <h2>
+                Quick Access
+            </h2>
+
+            <div class="actions">
+
+                <a
+                    class="btn primary"
+                    href="notes.html"
+                >
+                    📚 My Notes
+                </a>
+
+                <a
+                    class="btn secondary"
+                    href="timetable.html"
+                >
+                    🗓 Timetable
+                </a>
+
+                <a
+                    class="btn secondary"
+                    href="attendance.html"
+                >
+                    📊 Attendance
+                </a>
+
+            </div>
+
+
+            <br>
+
+
+            <h2>
+                Recent Notes
+            </h2>
+
+            <div id="recentNotes"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    id="toast"
+    class="toast"
+></div>
+
+
+<script src="common.js"></script>
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Timetable - Student Portal
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        Student Portal
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="timetable.html">
+            Timetable
+        </a>
+
+        <a href="notes.html">
+            Notes
+        </a>
+
+        <a href="attendance.html">
+            Attendance
+        </a>
+
+    </div>
+
+    <button
+        class="btn danger"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</nav>
+
+
+<main class="main">
+
+    <div class="page-title">
+
+        <h1>
+            My Timetable
+        </h1>
+
+        <p class="muted">
+
+            Enter your weekly class schedule.
+
+        </p>
+
+    </div>
+
+
+    <!-- ADD CLASS -->
+
+    <section class="panel">
+
+        <h2>
+            Add Class
+        </h2>
+
+        <form id="timetableForm">
+
+            <div class="form-grid">
+
+
+                <div>
+
+                    <label>
+                        Day
+                    </label>
+
+                    <select
+                        id="day"
+                        required
+                    >
+
+                        <option value="">
+                            Select Day
+                        </option>
+
+                        <option>
+                            Monday
+                        </option>
+
+                        <option>
+                            Tuesday
+                        </option>
+
+                        <option>
+                            Wednesday
+                        </option>
+
+                        <option>
+                            Thursday
+                        </option>
+
+                        <option>
+                            Friday
+                        </option>
+
+                        <option>
+                            Saturday
+                        </option>
+
+                        <option>
+                            Sunday
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Start Time
+                    </label>
+
+                    <input
+                        id="start"
+                        type="time"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        End Time
+                    </label>
+
+                    <input
+                        id="end"
+                        type="time"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <input
+                        id="subject"
+                        placeholder="DBMS"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <button
+                    class="btn primary"
+                    type="submit"
+                >
+                    + Add Class
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- TIMETABLE -->
+
+    <section class="panel">
+
+        <h2>
+            Weekly Timetable
+        </h2>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Day
+                        </th>
+
+                        <th>
+                            Start
+                        </th>
+
+                        <th>
+                            End
+                        </th>
+
+                        <th>
+                            Subject
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody
+                    id="timetableBody"
+                >
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    id="toast"
+    class="toast"
+></div>
+
+
+<script src="common.js"></script>
+
+<script src="timetable.js"></script>
+
+
+</body>
+
+</html>

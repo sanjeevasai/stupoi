@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Subject - Student Portal
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================
+     NAVBAR
+========================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Student Portal
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="timetable.html">
+            Timetable
+        </a>
+
+        <a href="notes.html">
+            Notes
+        </a>
+
+        <a href="attendance.html">
+            Attendance
+        </a>
+
+    </div>
+
+
+    <button
+        class="btn danger"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</header>
+
+
+
+<!-- ==========================
+     PAGE TITLE
+========================== -->
+
+<div class="page-title">
+
+    <a
+        href="notes.html"
+        class="muted"
+    >
+        ← Back to Subjects
+    </a>
+
+
+    <h1 id="subjectTitle">
+        Subject
+    </h1>
+
+
+    <p class="muted">
+
+        Store notes, PDFs and other
+        study materials for this subject.
+
+    </p>
+
+</div>
+
+
+
+<!-- ==========================
+     CREATE NOTE + UPLOAD FILE
+========================== -->
+
+<section class="grid-2">
+
+
+    <!-- CREATE NOTE -->
+
+    <section class="panel">
+
+        <h2>
+            ✍ Create Note
+        </h2>
+
+
+        <form id="noteForm">
+
+
+            <label>
+                Note Title
+            </label>
+
+
+            <input
+                id="noteTitle"
+                placeholder="Example: Normalization"
+                required
+            >
+
+
+            <label>
+                Note Content
+            </label>
+
+
+            <textarea
+                id="noteContent"
+                placeholder="Write your notes here..."
+                required
+            ></textarea>
+
+
+            <div class="form-actions">
+
+                <button
+                    class="btn primary"
+                    type="submit"
+                >
+
+                    Save Note
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+
+
+    <!-- FILE UPLOAD -->
+
+    <section class="panel">
+
+        <h2>
+            📁 Upload Study Material
+        </h2>
+
+
+        <p class="muted">
+
+            You can upload any type of file
+            such as PDF, Word, PowerPoint,
+            Excel, images, ZIP files, etc.
+
+        </p>
+
+
+        <form id="pdfForm">
+
+
+            <label>
+                Select File
+            </label>
+
+
+            <input
+                id="pdfFile"
+                type="file"
+                required
+            >
+
+
+            <div class="form-actions">
+
+                <button
+                    class="btn primary"
+                    type="submit"
+                >
+
+                    Upload File
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+        <p
+            id="storageWarning"
+            class="muted"
+            style="margin-top:15px"
+        ></p>
+
+
+    </section>
+
+</section>
+
+
+
+<!-- ==========================
+     NOTES
+========================== -->
+
+<section class="panel">
+
+    <h2>
+        📝 Notes
+    </h2>
+
+
+    <div
+        id="notesList"
+        class="note-list"
+    >
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+     FILES
+========================== -->
+
+<section class="panel">
+
+    <h2>
+        📁 Uploaded Files
+    </h2>
+
+
+    <div
+        id="pdfList"
+        class="pdf-list"
+    >
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+     JAVASCRIPT
+========================== -->
+
+<script src="common.js"></script>
+<script src="app.js"></script>
+<script src="subject.js"></script>
+
+
+</body>
+
+</html>
